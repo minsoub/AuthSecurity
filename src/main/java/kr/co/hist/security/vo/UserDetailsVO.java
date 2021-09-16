@@ -1,5 +1,6 @@
 package kr.co.hist.security.vo;
 
+import kr.co.hist.user.vo.UserVO;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.Delegate;
@@ -33,21 +34,21 @@ public class UserDetailsVO implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return userVO.getIsEnable();
+        return userVO.isEnable();
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return userVO.getIsEnable();
+        return userVO.isEnable();
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return userVO.getIsEnable();
+        return userVO.isEnable();
     }
 
     @Override
     public boolean isEnabled() {
-        return userVO.getIsEnabled();
+        return userVO.isEnable();
     }
 }
